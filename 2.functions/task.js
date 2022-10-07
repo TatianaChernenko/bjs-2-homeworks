@@ -27,11 +27,13 @@ function worker(arr) {
   return sum;
 }
 
-function makeWork(arrOfArr, func) {
+function makeWork(arrOfArr, worker) {
   let max = -Infinity;
+
   for(let i = 0; i < arrOfArr.length; i++){
-    if(max < worker(arrOfArr[i]));
+    if(max < worker(arrOfArr[i])){
     max = worker(arrOfArr[i]);
+    }
   }
   return max;
 }
