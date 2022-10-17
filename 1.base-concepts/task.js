@@ -3,18 +3,15 @@
 function solveEquation(a, b, c) {
   let arr = [];
   let d = Math.pow(b,2)-(4*a*c);
-  if(d<0){
-    return arr;
-  }else if (d==0){
+ if (d==0){
     let x1 = -b/(2*a);
     arr.push(x1)
-    return arr;
   }else if (d>0){
     let x1 = (-b + Math.sqrt(d))/(2*a);
     let x2 = (-b - Math.sqrt(d))/(2*a);
     arr.push(x1,x2);
-  return arr; // array
   }
+  return arr; // array
 }
 
 
@@ -34,7 +31,7 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
     return 'Ошибка ввода данных даты'
   }else{
     let  payMonth = S*(P+P/(((1+P)**n)-1)); // Ежемесячная оплата
-    let totalAmount = (payMonth*n).toFixed(2); // Общая сумма
+    let totalAmount = +(payMonth*n).toFixed(2); // Общая сумма
     console.log(totalAmount);
   return totalAmount;
   }
